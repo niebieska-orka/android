@@ -2,4 +2,6 @@
     <string name="app_name">Board games</string>
     <string name="splash_screen_app_name">BOARD GAMES</string>
     <string name="splash_screen_vendor">niebieska orka</string>
+    <string name="qr_message">Zeskanuj kod QR znajdujący sie na grze</string>
+
 </resources>
