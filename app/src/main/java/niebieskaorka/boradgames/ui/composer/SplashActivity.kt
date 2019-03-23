@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import niebieskaorka.boradgames.R
 import android.support.v7.app.AppCompatActivity
+import niebieskaorka.boradgames.data.remote.Storage
 import kotlin.concurrent.thread
 
 class SplashActivity : AppCompatActivity() {
@@ -18,6 +19,9 @@ class SplashActivity : AppCompatActivity() {
 
         thread(start = true) {
             // startup code goes here
+            Storage.games.forEach { println("XD") }
+            println(Storage.games)
+            println("????????")
             Thread.sleep(3000L)
 
             println("XDDD")
