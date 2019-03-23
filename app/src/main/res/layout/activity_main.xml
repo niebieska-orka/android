@@ -10,11 +10,11 @@
     <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
+            android:layout_gravity="bottom"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:gravity="center" app:layout_constraintHorizontal_bias="0.0">
+            app:layout_constraintHorizontal_bias="0.0">
         <ListView
                 android:id="@+id/list_view"
                 android:layout_width="match_parent"
@@ -33,7 +33,7 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.0"
-                android:layout_marginBottom="80dp"/>
+                android:layout_alignParentBottom="true"/>
         <Button
                 android:text="Skanuj"
                 android:layout_width="120dp"
@@ -44,7 +44,7 @@
                 app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toEndOf="@+id/pending_button"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintVertical_bias="0.0" android:layout_centerHorizontal="true"
-                android:layout_marginBottom="80dp"/>
+                android:layout_alignParentBottom="true" android:layout_alignParentTop="false"/>
         <Button
                 android:text="Moje rezerwacje"
                 android:textColor="#ffffff"
@@ -55,6 +55,6 @@
                 app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toEndOf="@+id/qr_button"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintVertical_bias="0.0" android:layout_alignParentRight="true"
-                android:layout_marginBottom="80dp"/>
+                android:layout_alignParentBottom="true" android:layout_alignParentTop="false"/>
     </RelativeLayout>
 </android.support.constraint.ConstraintLayout>
