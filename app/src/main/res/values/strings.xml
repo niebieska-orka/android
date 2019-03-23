@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Board games</string>
+    <string name="splash_screen_app_name">BOARD GAMES</string>
+    <string name="splash_screen_vendor">niebieska orka</string>
 </resources>
