@@ -1,4 +1,4 @@
-package niebieskaorka.boradgames.ui
+package niebieskaorka.boradgames.ui.composer
 
 import android.content.Intent
 import android.os.Bundle
@@ -19,7 +19,7 @@ class LoginActivity : AppCompatActivity() {
         btn_login.setOnClickListener {
             var e_user_email = findViewById<TextView>(R.id.user_email)
             var e_user_pwd = findViewById<TextView>(R.id.user_password)
-            startActivity(Intent(this, QrScanner::class.java))
+            startActivity(Intent(this, MainActivity::class.java))
         }
 
         register_text.setOnClickListener {

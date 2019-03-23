@@ -6,7 +6,7 @@
                                              android:layout_height="match_parent"
                                              android:id="@+id/qr_screen"
                                              android:background="#ffffff"
-                                             tools:context=".ui.QrScanner">
+                                             tools:context=".ui.composer.QrScanner">
 
     <SurfaceView
             android:id="@+id/camera_preview"

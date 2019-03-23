@@ -1,4 +1,4 @@
-package niebieskaorka.boradgames.ui
+package niebieskaorka.boradgames.ui.composer
 
 import android.app.DownloadManager
 import android.content.Context

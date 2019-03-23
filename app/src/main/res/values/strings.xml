@@ -2,13 +2,13 @@
     <string name="app_name">Board games</string>
     <string name="splash_screen_app_name">BOARD GAMES</string>
     <string name="splash_screen_vendor">niebieska orka</string>
-    <string name="log_in">Log in</string>
-    <string name="no_account_yet">No account yet?</string>
-    <string name="register">Register</string>
-    <string name="surname">surname</string>
-    <string name="name">name</string>
-    <string name="you_pega_com">you@pega.com</string>
-    <string name="password">password</string>
+    <string name="log_in">Zaloguj</string>
+    <string name="no_account_yet">Nie masz jeszcze konta?</string>
+    <string name="register">Zarejestruj</string>
+    <string name="surname">nazwisko</string>
+    <string name="name">imie</string>
+    <string name="you_pega_com">ty@pega.com</string>
+    <string name="password">hasło</string>
     <string name="qr_message">Zeskanuj kod QR znajdujący sie na grze</string>
 
 </resources>
