@@ -12,12 +12,13 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.login_screen)
 
-        var e_user_email = findViewById<TextView>(R.id.user_email)
-        var e_user_pwd = findViewById<TextView>(R.id.user_password)
-        var register_text = findViewById<TextView>(R.id.register_text)
         var btn_login = findViewById<TextView>(R.id.login_button)
+        var register_text = findViewById<TextView>(R.id.register_text)
+
 
         btn_login.setOnClickListener {
+            var e_user_email = findViewById<TextView>(R.id.user_email)
+            var e_user_pwd = findViewById<TextView>(R.id.user_password)
             startActivity(Intent(this, MainActivity::class.java))
         }
 

@@ -12,7 +12,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_height="wrap_content"
-            android:id="@+id/button" android:layout_marginBottom="180dp" app:layout_constraintHorizontal_bias="0.498"/>
+            android:id="@+id/register_button" android:layout_marginBottom="180dp" app:layout_constraintHorizontal_bias="0.498"/>
     <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -21,7 +21,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             android:ems="10"
-            android:id="@+id/editText"
+            android:id="@+id/user_password"
             android:text="@string/password" android:layout_marginBottom="272dp"/>
     <EditText
             android:layout_width="wrap_content"
@@ -31,7 +31,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             android:ems="10"
-            android:id="@+id/editText2"
+            android:id="@+id/user_email"
             android:text="@string/you_pega_com" android:layout_marginBottom="332dp"
     />
     <EditText
@@ -43,7 +43,7 @@
             app:layout_constraintStart_toStartOf="parent"
             android:text="@string/name"
             android:ems="10"
-            android:id="@+id/editText3" android:layout_marginBottom="448dp"/>
+            android:id="@+id/user_name" android:layout_marginBottom="448dp"/>
     <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -53,5 +53,5 @@
             app:layout_constraintStart_toStartOf="parent"
             android:text="@string/surname"
             android:ems="10"
-            android:id="@+id/editText4" android:layout_marginBottom="392dp"/>
+            android:id="@+id/user_surname" android:layout_marginBottom="392dp"/>
 </android.support.constraint.ConstraintLayout>
