@@ -27,8 +27,8 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:id="@+id/user_email" android:layout_marginBottom="212dp"
-            app:layout_constraintHorizontal_bias="0.454" android:hint="password"/>
+            android:id="@+id/user_email" android:layout_marginBottom="260dp"
+            app:layout_constraintHorizontal_bias="0.454" android:hint="e-mail"/>
     <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -37,8 +37,8 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:id="@+id/user_password" android:layout_marginBottom="280dp"
-            app:layout_constraintHorizontal_bias="0.454" android:hint="you@pega.com"/>
+            android:id="@+id/user_password" android:layout_marginBottom="200dp"
+            app:layout_constraintHorizontal_bias="0.454" android:hint="password"/>
     <TextView
             android:text="@string/no_account_yet"
             app:layout_constraintBottom_toBottomOf="parent"
