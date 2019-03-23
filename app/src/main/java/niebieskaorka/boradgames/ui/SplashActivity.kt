@@ -22,7 +22,7 @@ class SplashActivity : AppCompatActivity() {
 
             println("XDDD")
 
-            startActivity(Intent(this, QrScanner::class.java))
+            startActivity(Intent(this, MainActivity::class.java))
         }
     }
 }
