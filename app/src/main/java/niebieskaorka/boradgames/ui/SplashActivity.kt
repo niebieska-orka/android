@@ -18,7 +18,7 @@ class SplashActivity : AppCompatActivity() {
 
         thread(start = true) {
             // startup code goes here
-            Thread.sleep(2000L)
+            Thread.sleep(3000L)
 
             println("XDDD")
 
