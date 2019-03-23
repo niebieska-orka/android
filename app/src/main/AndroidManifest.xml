@@ -38,6 +38,9 @@
 
         <activity android:name=".ui.composer.MainActivity" android:theme="@style/NoActionBar">
         </activity>
+
+        <activity android:name=".ui.composer.ReserveActivity" android:theme="@style/NoActionBar">
+        </activity>
     </application>
 
 </manifest>

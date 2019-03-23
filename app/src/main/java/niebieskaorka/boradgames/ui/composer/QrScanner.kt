@@ -2,6 +2,7 @@ package niebieskaorka.boradgames.ui.composer
 
 import android.app.DownloadManager
 import android.content.Context
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Bundle
 import android.os.Vibrator
@@ -98,8 +99,9 @@ class QrScanner : AppCompatActivity() {
                         val vibratorService = getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
                         vibratorService.vibrate(1000)
 
-                        println(qrCodes.valueAt(0).displayValue)
-                        // Uruchamianie resta
+                        val intent = Intent(this@QrScanner, ReserveActivity::class.java)
+                        intent.putExtra("gameID", qrCodes.valueAt(0).displayValue)
+                        startActivity(intent)
                     }
                 }
             }
