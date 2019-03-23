@@ -8,6 +8,7 @@ import android.widget.Button
 import android.widget.ListView
 import niebieskaorka.boradgames.R
 import niebieskaorka.boradgames.data.remote.Storage
+import niebieskaorka.boradgames.ui.common.GameAdapter
 import kotlin.concurrent.thread
 
 class MainActivity : AppCompatActivity() {
@@ -18,13 +19,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         listView = findViewById<ListView>(R.id.list_view)
-        val listItems = arrayOfNulls<String>(Storage.games.size)
-        for (i in 0 until Storage.games.size) {
-            val game = Storage.games[i]
-            listItems[i] = game.title
-        }
 
-        val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, listItems)
+        val adapter = GameAdapter(this, Storage.games)
         listView.adapter = adapter
 
         val btn_qr = findViewById(R.id.qr_button) as Button

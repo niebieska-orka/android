@@ -4,5 +4,8 @@ import niebieskaorka.boradgames.data.model.Game
 
 object Storage {
     //    val sensors = Connection().getSensors()
-    val games = mutableListOf(Game("Game 1"), Game("Game 2"))
+    val games = arrayListOf(
+        Game("Game 1", "https://www.pointillist.com/wp-content/uploads/2017/10/Pega-logo-1024x1024.jpg"),
+        Game("Game 2", "https://www.pointillist.com/wp-content/uploads/2017/10/Pega-logo-1024x1024.jpg")
+    )
 }

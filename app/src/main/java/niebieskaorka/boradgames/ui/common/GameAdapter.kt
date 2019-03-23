@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.ImageView
 import android.widget.TextView
+import com.squareup.picasso.Picasso
 import niebieskaorka.boradgames.data.model.Game
 import niebieskaorka.boradgames.R
 
@@ -58,7 +59,7 @@ class GameAdapter(
         detailTextView.text = game.title
 
 // 3
-        Picasso.with(context).load(recipe.imageUrl).placeholder(R.mipmap.ic_launcher).into(thumbnailImageView)
+        Picasso.get().load(game.imageUrl).placeholder(R.mipmap.ic_launcher).into(thumbnailImageView)
 
         return rowView
     }
