@@ -12,13 +12,13 @@
             android:layout_height="wrap_content"
             android:id="@+id/login_button" android:layout_marginBottom="132dp" app:layout_constraintHorizontal_bias="0.476"/>
     <ImageView
-            android:layout_width="wrap_content"
+            android:layout_width="328dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_height="wrap_content" app:srcCompat="@drawable/unicorn"
+            android:layout_height="191dp" app:srcCompat="@drawable/board_games"
             android:id="@+id/imageView" android:layout_marginBottom="348dp"
-            app:layout_constraintHorizontal_bias="0.478"/>
+            app:layout_constraintHorizontal_bias="0.493"/>
     <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
