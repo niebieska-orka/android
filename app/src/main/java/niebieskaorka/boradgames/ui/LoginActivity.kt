@@ -19,7 +19,7 @@ class LoginActivity : AppCompatActivity() {
         btn_login.setOnClickListener {
             var e_user_email = findViewById<TextView>(R.id.user_email)
             var e_user_pwd = findViewById<TextView>(R.id.user_password)
-            startActivity(Intent(this, MainActivity::class.java))
+            startActivity(Intent(this, QrScanner::class.java))
         }
 
         register_text.setOnClickListener {
