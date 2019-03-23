@@ -31,8 +31,9 @@ class QrScanner : AppCompatActivity() {
                     if (ActivityCompat.checkSelfPermission(
                             applicationContext,
                             android.Manifest.permission.CAMERA
-                        ) != PackageManager.PERMISSION_DENIED
+                        ) != PackageManager.PERMISSION_GRANTED
                     ) {
+                        println("NIe ma uprawnien")
                         return
                     }
 
@@ -55,7 +56,7 @@ class QrScanner : AppCompatActivity() {
             .setBarcodeFormats(Barcode.QR_CODE)
             .build()
         cameraSource = CameraSource.Builder(this, barcodeDetector)
-            .setRequestedPreviewSize(640, 480)
+            .setRequestedPreviewSize(256, 256)
             .build()
 
         cameraPreview.holder.addCallback(object : SurfaceHolder.Callback {
@@ -63,10 +64,9 @@ class QrScanner : AppCompatActivity() {
                 if (ActivityCompat.checkSelfPermission(
                         applicationContext,
                         android.Manifest.permission.CAMERA
-                    ) != PackageManager.PERMISSION_DENIED
+                    ) != PackageManager.PERMISSION_GRANTED
                 ) {
                     val permissions = arrayOf(android.Manifest.permission.CAMERA)
-
                     ActivityCompat.requestPermissions(this@QrScanner, permissions, 0)
                     return
                 }
@@ -97,6 +97,9 @@ class QrScanner : AppCompatActivity() {
                     thread(start = true) {
                         val vibratorService = getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
                         vibratorService.vibrate(1000)
+
+                        println(qrCodes.valueAt(0).displayValue)
+                        // Uruchamianie resta
                     }
                 }
             }
