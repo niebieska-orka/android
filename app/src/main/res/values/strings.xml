@@ -9,4 +9,6 @@
     <string name="name">name</string>
     <string name="you_pega_com">you@pega.com</string>
     <string name="password">password</string>
+    <string name="qr_message">Zeskanuj kod QR znajdujący sie na grze</string>
+
 </resources>
