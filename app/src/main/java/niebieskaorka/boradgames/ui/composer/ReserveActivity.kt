@@ -22,13 +22,15 @@ import kotlin.concurrent.thread
 class ReserveActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        Storage.generated = false
         super.onCreate(savedInstanceState)
 
         val ss: String? = intent.getStringExtra("gameID")
         val num: Int? = intent.getIntExtra("number", 0)
+        var game: Game? = null
 
         if (ss != null) {
-            var game:Game? = Connection().getGame(ss)
+            game = Connection().getGame(ss)
 
             setContentView(R.layout.reserve_screen)
 
@@ -57,7 +59,7 @@ class ReserveActivity : AppCompatActivity() {
 
         if (num != null) {
             println(num)
-            var game = Storage.games.get(num)
+            game = Storage.games.get(num)
             println(game.title)
 
             setContentView(R.layout.reserve_screen)
@@ -87,6 +89,7 @@ class ReserveActivity : AppCompatActivity() {
 
         val reserve_button = findViewById<TextView>(R.id.reserve_button)
         reserve_button.setOnClickListener {
+            Connection().addRes("17", "1")
             startActivity(Intent(this, MakeResActivity::class.java))
         }
     }

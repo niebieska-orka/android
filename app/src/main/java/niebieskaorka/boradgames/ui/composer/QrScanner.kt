@@ -15,7 +15,9 @@ import com.google.android.gms.vision.Detector
 import com.google.android.gms.vision.barcode.Barcode
 import com.google.android.gms.vision.barcode.BarcodeDetector
 import niebieskaorka.boradgames.R
+import niebieskaorka.boradgames.data.remote.Storage
 import java.lang.Exception
+import java.lang.Thread.sleep
 import kotlin.concurrent.thread
 import kotlin.contracts.contract
 import kotlin.system.exitProcess
@@ -102,9 +104,10 @@ class QrScanner : AppCompatActivity() {
                         val vibratorService = getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
                         vibratorService.vibrate(1000)
 
-                        if (intent == null) {
+                        if (Storage.generated == false) {
                             intent = Intent(this@QrScanner, ReserveActivity::class.java)
                             intent!!.putExtra("gameID", qrCodes.valueAt(0).displayValue)
+                            Storage.generated = true
                             startActivity(intent)
                         }
                     }.join()

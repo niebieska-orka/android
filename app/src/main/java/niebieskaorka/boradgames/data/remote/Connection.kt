@@ -11,6 +11,31 @@ import kotlin.concurrent.thread
 
 class Connection {
 
+    fun addRes(game_ID: String, user_ID: String): Boolean {
+        khttp.post(
+            url = "http://10.20.170.49:8000/reservation",
+            json = mapOf("borrower" to user_ID, "game" to game_ID))
+
+//        println("http://10.20.170.49:8000/reservation/?borrower=$user_ID&game=$game_ID&borrow_date=2019-01-06T12:12")
+//        val connection = URL("http://10.20.170.49:8000/reservation/?borrower=$user_ID&game=$game_ID&borrow_date=2019-01-06T12:12").openConnection() as HttpURLConnection
+//        println(connection.responseCode)
+//        try {
+//            println("a???")
+//            thread(start = true) {
+//                val data = connection.outputStream.bufferedWriter().newLine()
+//                println(data)
+//            }.join()
+//            println("!!!")
+//            return true
+//        } catch (e: Exception) {
+//            println("Service unavailable " + e.message)
+//            return false
+//        } finally {
+//            connection.disconnect()
+//        }
+        return true
+    }
+
     fun getGame(game_ID: String): Game? {
         var game: Game? = null
         thread(start = true) {

@@ -37,7 +37,7 @@
             android:textSize="18sp"/>
     <TextView
             android:text="Through the Ages: A New Story of Civilization is the new edition of Through the Ages: A Story of Civilization, with many changes small and large to the game's cards over its three ages and extensive changes to how military works."
-            android:layout_width="380dp"
+            android:layout_width="362dp"
             android:layout_height="62dp"
             android:id="@+id/description" android:layout_marginTop="8dp"
             app:layout_constraintTop_toBottomOf="@+id/textView3" app:layout_constraintStart_toStartOf="parent"

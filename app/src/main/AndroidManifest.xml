@@ -31,6 +31,9 @@
         <activity android:name=".ui.composer.LoginActivity" android:theme="@style/NoActionBar">
         </activity>
 
+        <activity android:name=".ui.composer.MakeResActivity" android:theme="@style/NoActionBar">
+        </activity>
+
         <activity android:name=".ui.composer.QrScanner" android:theme="@style/NoActionBar">
         </activity>
 
