@@ -3,6 +3,7 @@ package niebieskaorka.boradgames.ui.composer
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.AdapterView
 import android.widget.Button
 import android.widget.ListView
 import niebieskaorka.boradgames.R
@@ -30,8 +31,10 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        listView.setOnClickListener() {
-            println("AA`ą")
+        listView.setOnItemClickListener { parent, view, position, id ->
+            val intent = Intent(this, ReserveActivity::class.java)
+            intent.putExtra("number", position)
+            startActivity(intent)
         }
     }
 
