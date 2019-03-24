@@ -39,7 +39,7 @@
             android:text="Through the Ages: A New Story of Civilization is the new edition of Through the Ages: A Story of Civilization, with many changes small and large to the game's cards over its three ages and extensive changes to how military works."
             android:layout_width="380dp"
             android:layout_height="62dp"
-            android:id="@+id/textView4" android:layout_marginTop="8dp"
+            android:id="@+id/description" android:layout_marginTop="8dp"
             app:layout_constraintTop_toBottomOf="@+id/textView3" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="16dp" android:textSize="12sp" android:layout_marginEnd="8dp"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.0"
@@ -48,7 +48,7 @@
             android:layout_width="32dp"
             android:layout_height="32dp" app:srcCompat="@drawable/boy"
             android:id="@+id/imageView4" android:layout_marginTop="28dp"
-            app:layout_constraintTop_toBottomOf="@+id/textView4" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/description" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="16dp"/>
     <ImageView
             android:layout_width="32dp"
@@ -62,7 +62,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/reserve_how_many_people" app:layout_constraintStart_toEndOf="@+id/imageView4"
             android:layout_marginTop="40dp"
-            app:layout_constraintTop_toBottomOf="@+id/textView4" android:layout_marginStart="16dp"/>
+            app:layout_constraintTop_toBottomOf="@+id/description" android:layout_marginStart="16dp"/>
     <TextView
             android:text="3h"
             android:layout_width="wrap_content"
@@ -86,13 +86,13 @@
             android:layout_height="32dp" app:srcCompat="@drawable/calendar"
             android:id="@+id/imageView6"
             app:layout_constraintStart_toEndOf="@+id/imageView4" android:layout_marginStart="152dp"
-            android:layout_marginTop="28dp" app:layout_constraintTop_toBottomOf="@+id/textView4"/>
+            android:layout_marginTop="28dp" app:layout_constraintTop_toBottomOf="@+id/description"/>
     <TextView
             android:text="8+ lat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/reserve_age" android:layout_marginTop="40dp"
-            app:layout_constraintTop_toBottomOf="@+id/textView4" app:layout_constraintStart_toEndOf="@+id/imageView6"
+            app:layout_constraintTop_toBottomOf="@+id/description" app:layout_constraintStart_toEndOf="@+id/imageView6"
             android:layout_marginStart="16dp"/>
     <ImageView
             android:layout_width="32dp"

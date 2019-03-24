@@ -11,7 +11,7 @@ import java.net.URL
 class Connection {
 
     fun getGame(game_ID: String): Game? {
-        val connection = URL("http://192.168.0.242:8000/game/$game_ID").openConnection() as HttpURLConnection
+        val connection = URL("http://10.20.170.49:8000/game/$game_ID").openConnection() as HttpURLConnection
         println(connection.responseCode)
         try {
             println("a???")
@@ -28,7 +28,7 @@ class Connection {
     }
 
     fun getAllGames(): List<Game> {
-        val connection = URL("http://192.168.0.242:8000/games/").openConnection() as HttpURLConnection
+        val connection = URL("http://10.20.170.49:8000/games/").openConnection() as HttpURLConnection
 //        println(connection.responseCode)
         try {
             println("???")
