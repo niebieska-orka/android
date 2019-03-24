@@ -10,6 +10,8 @@ import android.widget.TextView
 import com.squareup.picasso.Picasso
 import niebieskaorka.boradgames.data.model.Game
 import niebieskaorka.boradgames.R
+import java.math.RoundingMode
+import java.text.DecimalFormat
 
 class GameAdapter(
     private val context: Context,
@@ -55,14 +57,16 @@ class GameAdapter(
 
 // 2
         titleTextView.text = game.title
-        subtitleTextView.text = game.title
-        detailTextView.text = game.title
+        subtitleTextView.text = game.min_players.toString() + "-" + game.max_players.toString() + " graczy"
+        val df = DecimalFormat("#.#")
+        df.roundingMode = RoundingMode.CEILING
+        detailTextView.text = df.format(game.score)
+
 
 // 3
-        Picasso.get().load(game.title).placeholder(R.mipmap.ic_launcher).into(thumbnailImageView)
+        Picasso.get().load(game.picture_url).placeholder(R.mipmap.ic_launcher).into(thumbnailImageView)
 
         return rowView
     }
-
 
 }

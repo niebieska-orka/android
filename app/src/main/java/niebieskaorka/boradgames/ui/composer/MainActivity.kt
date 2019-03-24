@@ -20,6 +20,7 @@ class MainActivity : AppCompatActivity() {
         listView = findViewById<ListView>(R.id.list_view)
 
         val adapter = GameAdapter(this, Storage.games)
+
         listView.adapter = adapter
 
         val btn_qr = findViewById(R.id.qr_button) as Button
@@ -27,6 +28,10 @@ class MainActivity : AppCompatActivity() {
             thread(start = true) {
                 startActivity(Intent(this, QrScanner::class.java))
             }
+        }
+
+        listView.setOnClickListener() {
+            println("AA`ą")
         }
     }
 

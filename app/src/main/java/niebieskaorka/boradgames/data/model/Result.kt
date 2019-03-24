@@ -10,5 +10,13 @@ data class Result(
 )
 
 data class Game(
-    val title: String
+    val title: String,
+    val description: String,
+    val picture_url: String,
+    val publisher: String,
+    val score: Float,
+    val playing_time: Float,
+    val min_age: Int,
+    val min_players: Int,
+    val max_players: Int
 )
