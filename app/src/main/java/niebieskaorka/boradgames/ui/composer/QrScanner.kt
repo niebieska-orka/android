@@ -18,12 +18,14 @@ import niebieskaorka.boradgames.R
 import java.lang.Exception
 import kotlin.concurrent.thread
 import kotlin.contracts.contract
+import kotlin.system.exitProcess
 
 class QrScanner : AppCompatActivity() {
     lateinit var cameraPreview: SurfaceView
     lateinit var barcodeDetector: BarcodeDetector
     lateinit var cameraSource: CameraSource
     val requestCameraPermissionID = 1001
+
 
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
         when (requestCode) {
@@ -91,18 +93,21 @@ class QrScanner : AppCompatActivity() {
             override fun release() {
             }
 
+            var intent:Intent? = null
+
             override fun receiveDetections(detections: Detector.Detections<Barcode>) {
                 val qrCodes = detections.detectedItems
-
                 if (qrCodes.size() != 0) {
                     thread(start = true) {
                         val vibratorService = getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
                         vibratorService.vibrate(1000)
 
-                        val intent = Intent(this@QrScanner, ReserveActivity::class.java)
-                        intent.putExtra("gameID", qrCodes.valueAt(0).displayValue)
-                        startActivity(intent)
-                    }
+                        if (intent == null) {
+                            intent = Intent(this@QrScanner, ReserveActivity::class.java)
+                            intent!!.putExtra("gameID", qrCodes.valueAt(0).displayValue)
+                            startActivity(intent)
+                        }
+                    }.join()
                 }
             }
         })

@@ -7,24 +7,28 @@ import niebieskaorka.boradgames.data.model.Game
 import niebieskaorka.boradgames.data.model.Result
 import java.net.HttpURLConnection
 import java.net.URL
+import kotlin.concurrent.thread
 
 class Connection {
 
     fun getGame(game_ID: String): Game? {
-        val connection = URL("http://10.20.170.49:8000/game/$game_ID").openConnection() as HttpURLConnection
-        println(connection.responseCode)
-        try {
-            println("a???")
-            val data = connection.inputStream.bufferedReader().readText()
-            println("!!!")
-            println(data)
-            return Gson().fromJson<Game>(data, Game::class.java)
-        } catch (e: Exception) {
-            println("Service unavailable " + e.message)
-        } finally {
-            connection.disconnect()
-        }
-        return null
+        var game: Game? = null
+        thread(start = true) {
+            val connection = URL("http://10.20.170.49:8000/game/$game_ID").openConnection() as HttpURLConnection
+            println(connection.responseCode)
+            try {
+                println("a???")
+                val data = connection.inputStream.bufferedReader().readText()
+                println("!!!")
+                println(data)
+                game = Gson().fromJson<Game>(data, Game::class.java)
+            } catch (e: Exception) {
+                println("Service unavailable " + e.message)
+            } finally {
+                connection.disconnect()
+            }
+        }.join()
+        return game
     }
 
     fun getAllGames(): List<Game> {
