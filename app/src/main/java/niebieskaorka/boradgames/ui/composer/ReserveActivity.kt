@@ -89,7 +89,7 @@ class ReserveActivity : AppCompatActivity() {
 
         val reserve_button = findViewById<TextView>(R.id.reserve_button)
         reserve_button.setOnClickListener {
-            Connection().addRes("17", "1")
+//            Connection().addRes("17", "1")
             startActivity(Intent(this, MakeResActivity::class.java))
         }
     }
